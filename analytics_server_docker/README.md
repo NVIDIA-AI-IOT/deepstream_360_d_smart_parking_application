@@ -56,9 +56,12 @@ If live mode has to be used, then:
     
         export GOOGLE_MAP_API_KEY=<YOUR GOOGLE_API_KEY>
     
-3. Download this application by either clicking the download button on top right corner, or using the command
+3. Assuming that the application has been cloned from this repository
 
         git clone https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application.git
+        
+   use the following command to change the current directory.
+
         cd ./analytics_server_docker
         
 4. Change Configurations (Optional)
