@@ -23,7 +23,7 @@ To run this application, the user needs to start the following docker containers
 1. **Analytics Server**: Check the README inside `analytics_server_docker` directory and follow the steps to start the docker containers.
 2. **Perception Server**: Check the README inside `perception_docker` directory and follow the steps to start the docker container.
 
-Other modules included in this project are as follows:
+Other modules included in this application are as follows:
 1. Apis
 2. Stream
 3. Tracker
