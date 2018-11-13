@@ -136,4 +136,4 @@ MC Tracker Config File=<stream config file>
 
 For further details please refer to
 
-https://gitlab-master.nvidia.com/metromind/DS-360-app/track
+https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application/tree/master/tracker
