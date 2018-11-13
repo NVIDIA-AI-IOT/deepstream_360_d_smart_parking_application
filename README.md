@@ -18,6 +18,10 @@ Deployment is based on an open source technology stack. The modules and technolo
 
 ## Getting Started
 
+To get started, clone this repository by either clicking the download button on top right corner, or using the command
+   
+    git clone https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application.git
+
 To run this application, the user needs to start the following docker containers:
 
 1. **Analytics Server**: Check the README inside `analytics_server_docker` directory and follow the steps to start the docker containers.
