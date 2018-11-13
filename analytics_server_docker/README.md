@@ -58,7 +58,8 @@ If live mode has to be used, then:
     
 3. Download this application by either clicking the download button on top right corner, or using the command
 
-        git clone https://gitlab-master.nvidia.com/metromind/DS-360-app/docker-360.git
+        git clone https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application.git
+        cd ./analytics_server_docker
         
 4. Change Configurations (Optional)
 
@@ -117,16 +118,15 @@ If live mode has to be used, then:
         a) sudo apt-get update
         b) sudo apt-get install default-jdk
         c) sudo apt-get install maven 
-        d) git clone https://gitlab-master.nvidia.com/metromind/DS-360-app/stream-360.git 
-        e) cd ./stream-360
-        f) sudo mvn clean install exec:java -Dexec.mainClass=com.nvidia.ds.util.Playback -Dexec.args="<KAFKA_BROKER_IP_ADDRESS>:<PORT> --input-file <path to input file>"
+        d) cd ./stream
+        e) sudo mvn clean install exec:java -Dexec.mainClass=com.nvidia.ds.util.Playback -Dexec.args="<KAFKA_BROKER_IP_ADDRESS>:<PORT> --input-file <path to input file>"
 
     **Note**: 
     + Change KAFKA_BROKER_IP_ADDRESS and PORT with Host IP_ADDRESS and port used by Kafka respectively.
     + Set path to input file as `data/playbackData.json` for viewing the demo data.
-    + The following additional options can be added to args in step f:
-        + **topic-name** - Name of the kafka topic to which data has to be sent. Set it to `metromind-raw` if input data is not tracked, but if input data has already gone through the tracking module then send it to `metromind-start`. The default value used in step f is `metromind-start`.<br/>
-    With this additional option, step f will look as follows:
+    + The following additional options can be added to args in step e:
+        + **topic-name** - Name of the kafka topic to which data has to be sent. Set it to `metromind-raw` if input data is not tracked, but if input data has already gone through the tracking module then send it to `metromind-start`. The default value used in step e is `metromind-start`.<br/>
+    With this additional option, step e will look as follows:
         
                 sudo mvn clean install exec:java -Dexec.mainClass=com.nvidia.ds.util.Playback -Dexec.args="<KAFKA_BROKER_IP_ADDRESS>:<PORT> --input-file <path to input file> --topic-name <kafka topic name>"
                 
