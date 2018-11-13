@@ -102,9 +102,9 @@ If live mode has to be used, then:
 
         mvn clean install -Pjar-with-dependencies
 
-7. Start spark batch job, this detects "overstay" anomaly (Note stop the streaming job in step 6 before running this job, or allocate more resources in the spark cluster)
+7. Start spark batch job, this detects "overstay" anomaly.
 
-    use a second shell, run the following command to login into spark master 
+    Use a second shell and run the following command to login into spark master 
 
         sudo docker exec -it spark-master /bin/bash
     
