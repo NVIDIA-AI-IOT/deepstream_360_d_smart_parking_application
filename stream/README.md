@@ -40,10 +40,10 @@ Trajectories for each and every vehicle is maintained during the period of time 
     this will genearte the required jar, note the location of new jars created
 
         [INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ stream-360 ---
-        [INFO] Building jar: /Users/home/git/stream-360/target/stream-360-1.0.jar
+        [INFO] Building jar: /Users/home/git/stream/target/stream-360-1.0.jar
         [INFO] 
         [INFO] --- maven-assembly-plugin:2.5.5:single (make-assembly) @ stream-360 ---
-        [INFO] Building jar: /Users/home/git/stream-360/target/stream-360-1.0-jar-with-dependencies.jar
+        [INFO] Building jar: /Users/home/git/stream/target/stream-360-1.0-jar-with-dependencies.jar
 
 
 ### Start Spark Streaming job, 
