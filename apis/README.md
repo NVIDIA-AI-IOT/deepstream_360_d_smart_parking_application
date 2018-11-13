@@ -1,5 +1,5 @@
-# 360 APIs
-Exposes APIs and Websocket for 360 app
+# APIs
+Exposes APIs and Websocket for smart parking application
 
 ## Introduction
 This module which was built using Node.js provides apis which gives us the state of the garage and also the events and anomalies that are occurring in garage.
