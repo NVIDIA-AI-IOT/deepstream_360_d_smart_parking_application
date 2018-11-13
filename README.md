@@ -24,11 +24,11 @@ To get started, clone this repository by either clicking the download button on 
 
 To run this application, the user needs to start the following docker containers:
 
-1. **Analytics Server**: Check the README inside `analytics_server_docker` directory and follow the steps to start the docker containers.
-2. **Perception Server**: Check the README inside `perception_docker` directory and follow the steps to start the docker container.
+1. **[Analytics Server](https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application/tree/master/analytics_server_docker)**: Check the README inside `analytics_server_docker` directory and follow the steps to start the docker containers.
+2. **[Perception Server](https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application/tree/master/perception_docker)**: Check the README inside `perception_docker` directory and follow the steps to start the docker container.
 
 Other modules included in this application are as follows:
-1. Apis
-2. Stream
-3. Tracker
-4. Ui
+1. [Apis](https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application/tree/master/apis)
+2. [Stream](https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application/tree/master/stream)
+3. [Tracker](https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application/tree/master/tracker)
+4. [Ui](https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application/tree/master/ui)
