@@ -35,6 +35,6 @@ Eg:
 
    **Note:** if there is an error that looks like below, then the broker address is not valid.
 
-   ERROR from nvmsgbroker: Could not configure supporting library.
-   Debug info: gstnvmsgbroker.c(325): gst_nvmsgbroker_start (): /GstPipeline:pipeline/GstNvMsgBroker:nvmsgbroker:
-   unable to connect to broker library
+       ERROR from nvmsgbroker: Could not configure supporting library.
+       Debug info: gstnvmsgbroker.c(325): gst_nvmsgbroker_start (): /GstPipeline:pipeline/GstNvMsgBroker:nvmsgbroker:
+       unable to connect to broker library
