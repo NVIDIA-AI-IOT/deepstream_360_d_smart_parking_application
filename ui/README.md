@@ -63,7 +63,7 @@ Once the Garage Marker is clicked, the map 'zooms-in' to the location and render
 ### Dependencies
 
 Make sure you have a recent version of [Node.js](https://nodejs.org/en/ "Nodejs.org") installed on your local machine.
-UI will also require Apis to be up and running. The 360 Apis can be found [here](https://gitlab-master.nvidia.com/metromind/DS-360-app/apis). Follow the README instructions in 360 API repository to complete the setup. 
+UI will also require Apis to be up and running. The 360 Apis can be found [here](https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application/tree/master/apis). Follow the README instructions in 360 API repository to complete the setup. 
 
 ### Environment Variables
 
@@ -82,7 +82,8 @@ Install `Node.js` and `360-Apis` as they are pre-requisites for this application
 
 Download this app by either clicking the download button on top right corner, or using the command
 
-    git clone https://gitlab-master.nvidia.com/metromind/DS-360-app/ui.git
+    git clone https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application.git
+    cd ./ui
 
 [package.json](package.json) has a list of libraries which are required for this application. Use `npm install` to install these dependencies of the project. 
 
