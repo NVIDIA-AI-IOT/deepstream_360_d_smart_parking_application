@@ -2,7 +2,18 @@
 
 This document describes the steps involved to run the 360d app using the docker image.
 
-1. After cloning the project, download videos from https://nvidia.app.box.com/s/ezzw0js1ti555vbn3swsggvepcsh3x7e and place it in a directory named 'videos' inside the directory 'perception_docker'.
+1. Assuming that the application has been cloned from this repository
+
+       git clone https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application.git
+   use the following command to change the current directory.
+
+       cd ./perception_docker
+
+   Create a directory named 'videos' and change the current directory by executing the command 
+   
+       mkdir videos && cd videos
+       
+   Download videos from https://nvidia.app.box.com/s/ezzw0js1ti555vbn3swsggvepcsh3x7e and place it in the 'videos' directory.
 
 2. Login to Nvidia container registry (nvcr.io)
 
