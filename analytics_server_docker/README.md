@@ -1,4 +1,4 @@
-# Docker 360
+# Analytics Server Docker
 
 ## Introduction
 
@@ -99,7 +99,7 @@ If live mode has to be used, then:
         ./bin/spark-submit  --class com.nvidia.ds.stream.StreamProcessor --master spark://master:7077 --executor-memory 8G --total-executor-cores 4 /tmp/data/stream-360-1.0-jar-with-dependencies.jar
     
     
-    Note that one can check out the stream-360 project and compile the source code using maven to create the stream-360-1.0-jar-with-dependencies.jar
+    Note that one can go to stream directory and compile the source code using maven to create the stream-360-1.0-jar-with-dependencies.jar
 
         mvn clean install -Pjar-with-dependencies
 
@@ -113,7 +113,7 @@ If live mode has to be used, then:
     
         ./bin/spark-submit  --class com.nvidia.ds.batch.BatchAnomaly --master local[8]  /tmp/data/stream-360-1.0-jar-with-dependencies.jar
 
-8.  **Generate Data** (Optional) , for test purpose ONLY, normally Deepstream 360 application will read from camera and send metadata to Analytics Server 
+8.  **Generate Data** (Optional) , for test purpose ONLY, normally Deepstream Smart Parking application will read from camera and send metadata to Analytics Server 
 
         a) sudo apt-get update
         b) sudo apt-get install default-jdk
