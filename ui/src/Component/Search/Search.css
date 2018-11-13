@@ -1,0 +1,77 @@
+.collapse {
+    margin: 15px 0;
+    height: 300px;
+    width: 650px;
+}
+
+.input input, .collapse input {
+    color: #fefefe;
+    border: none;
+    background-color: #76b900;
+    width: 100% !important;
+    margin-bottom: 10px;
+}
+
+.collapse input:disabled {
+    background-color: #76b900;
+    cursor: auto;
+}
+
+.input1 input {
+    color: #fefefe;
+    border: none;
+    background-color: #76b900;
+    border-bottom-left-radius: 0px !important;
+}
+
+.timespan {
+    color: #76b900;
+    height: 40px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.button {
+    border: 1px solid #76b900;
+    background-color: #76b900;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    opacity: 1 !important;
+}
+
+.button1 {
+    border: 1px solid #76b900;
+    background-color: #76b900;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    opacity: 1 !important;
+}
+
+.buttonbetween {
+    border: 1px solid #76b900;
+    background-color: #76b900;
+    border-radius: 0px !important;
+    opacity: 1 !important;
+}
+
+.button:focus, .buttonbetween:focus, .button1:focus {
+    background-color: #76b900 !important;    
+}
+
+.button:hover, .buttonbetween:hover, .button1:hover {
+    border: 1px solid #76b900 !important;
+    background-color: #76b900 !important;
+    opacity: 1 !important;
+}
+
+.glyphicon {
+    color: rgba(255,255,255,0.6);
+}
+
+@media (max-width: 900px) {
+    .collapse {
+        width: 100%;
+        height: auto;
+    }
+}

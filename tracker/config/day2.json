@@ -1,0 +1,302 @@
+{
+    "type": "object",
+    "properties": {
+        "@timestamp": {
+            "type": "string"
+        },
+        "analyticsModule": {
+            "properties": {
+                "description": {
+                    "type": ["string", "null"]
+                },
+                "id": {
+                    "type": ["string", "null"]
+                },
+                "source": {
+                    "type": ["string", "null"]
+                },
+                "version": {
+                    "type": ["string", "null"]
+                }
+            },
+            "type": "object"
+        },
+        "event": {
+            "properties": {
+                "id": {
+                    "type": ["string", "null"]
+                },
+                "type": {
+                    "type": ["string", "null"],
+                    "enum": [
+                        "entry",
+                        "exit",
+                        "moving",
+                        "stopped",
+                        "parked",
+                        "empty",
+                        "reset"
+                    ]
+                }
+            },
+            "type": "object"
+        },
+        "mdsversion": {
+            "type": ["string", "null"]
+        },
+        "messageid": {
+            "type": ["string", "null"]
+        },
+        "object": {
+            "properties": {
+                "bbox": {
+                    "properties": {
+                        "bottomrightx": {
+                            "type": ["number", "null"]
+                        },
+                        "bottomrighty": {
+                            "type": ["number", "null"]
+                        },
+                        "topleftx": {
+                            "type": ["number", "null"]
+                        },
+                        "toplefty": {
+                            "type": ["number", "null"]
+                        }
+                    },
+                    "type": "object"
+                },
+                "coordinate": {
+                    "properties": {
+                        "x": {
+                            "type": ["number", "null"]
+                        },
+                        "y": {
+                            "type": ["number", "null"]
+                        },
+                        "z": {
+                            "type": ["number", "null"]
+                        }
+                    },
+                    "type": "object"
+                },
+                "direction": {
+                    "type": ["number", "null"]
+                },
+                "id": {
+                    "type": ["string", "null"]
+                },
+                "location": {
+                    "properties": {
+                        "alt": {
+                            "type": ["number", "null"]
+                        },
+                        "lat": {
+                            "type": ["number", "null"]
+                        },
+                        "lon": {
+                            "type": ["number", "null"]
+                        }
+                    },
+                    "type": "object"
+                },
+                "orientation": {
+                    "type": ["number", "null"]
+                },
+                "signature": {
+                    "type": "array",
+                    "items": {
+                        "type": ["number", "null"]
+                    }
+                },
+                "speed": {
+                    "type": ["number", "null"]
+                },
+                "vehicle": {
+                    "properties": {
+                        "color": {
+                            "type": ["string", "null"]
+                        },
+                        "confidence": {
+                            "type": ["number", "null"]
+                        },
+                        "license": {
+                            "type": ["string", "null"]
+                        },
+                        "licenseState": {
+                            "type": ["string", "null"]
+                        },
+                        "make": {
+                            "type": ["string", "null"]
+                        },
+                        "model": {
+                            "type": ["string", "null"]
+                        },
+                        "type": {
+                            "type": ["string", "null"]
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "place": {
+            "properties": {
+                "aisle": {
+                    "properties": {
+                        "coordinate": {
+                            "properties": {
+                                "x": {
+                                    "type": ["number", "null"]
+                                },
+                                "y": {
+                                    "type": ["number", "null"]
+                                },
+                                "z": {
+                                    "type": ["number", "null"]
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "id": {
+                            "type": ["string", "null"]
+                        },
+                        "level": {
+                            "type": ["string", "null"]
+                        },
+                        "name": {
+                            "type": ["string", "null"]
+                        }
+                    },
+                    "type": "object"
+                },
+                "entrance": {
+                    "properties": {
+                        "coordinate": {
+                            "properties": {
+                                "x": {
+                                    "type": ["number", "null"]
+                                },
+                                "y": {
+                                    "type": ["number", "null"]
+                                },
+                                "z": {
+                                    "type": ["number", "null"]
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "lane": {
+                            "type": ["string", "null"]
+                        },
+                        "level": {
+                            "type": ["string", "null"]
+                        },
+                        "name": {
+                            "type": ["string", "null"]
+                        }
+                    },
+                    "type": "object"
+                },
+                "id": {
+                    "type": ["string", "null"]
+                },
+                "location": {
+                    "properties": {
+                        "alt": {
+                            "type": ["number", "null"]
+                        },
+                        "lat": {
+                            "type": ["number", "null"]
+                        },
+                        "lon": {
+                            "type": ["number", "null"]
+                        }
+                    },
+                    "type": "object"
+                },
+                "name": {
+                    "type": ["string", "null"]
+                },
+                "parkingSpot": {
+                    "properties": {
+                        "coordinate": {
+                            "properties": {
+                                "x": {
+                                    "type": ["number", "null"]
+                                },
+                                "y": {
+                                    "type": ["number", "null"]
+                                },
+                                "z": {
+                                    "type": ["number", "null"]
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "id": {
+                            "type": ["string", "null"]
+                        },
+                        "level": {
+                            "type": ["string", "null"]
+                        },
+                        "type": {
+                            "type": ["string", "null"]
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": {
+                    "type": ["string", "null"]
+                }
+            },
+            "type": "object"
+        },
+        "sensor": {
+            "properties": {
+                "coordinate": {
+                    "properties": {
+                        "x": {
+                            "type": ["number", "null"]
+                        },
+                        "y": {
+                            "type": ["number", "null"]
+                        },
+                        "z": {
+                            "type": ["number", "null"]
+                        }
+                    },
+                    "type": "object"
+                },
+                "description": {
+                    "type": ["string", "null"]
+                },
+                "id": {
+                    "type": ["string", "null"]
+                },
+                "location": {
+                    "properties": {
+                        "alt": {
+                            "type": ["number", "null"]
+                        },
+                        "lat": {
+                            "type": ["number", "null"]
+                        },
+                        "lon": {
+                            "type": ["number", "null"]
+                        }
+                    },
+                    "type": "object"
+                },
+                "type": {
+                    "type": ["string", "null"]
+                }
+            },
+            "type": "object"
+        },
+        "videoPath": {
+            "type": ["string", "null"]
+        }
+    }
+}

@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.vscode/
+.DS_Store
+
+*.log
+*.csv
+*.out
+*.txt
+

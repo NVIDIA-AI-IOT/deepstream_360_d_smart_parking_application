@@ -1,0 +1,108 @@
+.Header {
+    background-color: #343131;
+    border-bottom: 4px solid #76b900;
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    margin-left: -130px !important;
+    display: block;
+    color: #fefefe !important;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.questioncircle {
+    font-size: 18px;
+}
+
+.questioncircle > a {
+    background-color: inherit !important;
+    color: white !important;
+}
+
+.questioncircle > a:hover {
+    background-color: #080808 !important;
+    color: #76b900 !important;
+}
+
+.input input, .collapse input {
+    color: #fefefe;
+    border: none;
+    background-color: #76b900;
+}
+
+.input1 input {
+    color: #fefefe;
+    border: none;
+    background-color: #76b900;
+    border-bottom-left-radius: 0px !important;
+}
+
+.button {
+    border: 1px solid #76b900;
+    background-color: #76b900;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    opacity: 1 !important;
+}
+
+.button1 {
+    border: 1px solid #76b900;
+    background-color: #76b900;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    opacity: 1 !important;
+}
+
+.buttonbetween {
+    border: 1px solid #76b900;
+    background-color: #76b900;
+    border-radius: 0px !important;
+    opacity: 1 !important;
+}
+
+.button:focus, .buttonbetween:focus, .button1:focus {
+    background-color: #76b900 !important;    
+}
+
+.button:hover, .buttonbetween:hover, .button1:hover {
+    border: 1px solid #76b900 !important;
+    background-color: #76b900 !important;
+    opacity: 1 !important;
+}
+
+.glyphicon {
+    color: rgba(255,255,255,0.6);
+}
+
+
+.live {
+    position: absolute;
+    font-size: 30px;
+    margin: 10px 15px 0 15px;
+    right: 0;
+    top: 0;
+}
+
+.live > a {
+    color: inherit;
+}
+
+.tip > .tooltip-inner {
+    background-color: #fefefe !important;
+    color: inherit;
+}
+
+@media (max-width: 500px) {
+    .center {
+        font-size: 30px;
+        left: 60%;
+    }
+}
+
+@media (max-width: 800px) {
+    
+}

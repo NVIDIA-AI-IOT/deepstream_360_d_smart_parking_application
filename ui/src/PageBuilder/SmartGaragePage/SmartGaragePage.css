@@ -1,0 +1,71 @@
+.bodycontainer {
+    position: relative;
+    height: 100%;
+}
+
+.mapcontainer {
+    margin-top: 54px;
+    position: relative;
+    height: calc(100vh - 132px);
+}
+
+.kpi {
+    top: 100px;
+    left: 50px;
+}
+
+a {
+    cursor: pointer;
+    color: #76b900;
+}
+
+a:hover {
+    color: #76b900;
+}
+
+/* entire container, keeps perspective */
+.flipContainer {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	/* .flipContainer:hover .flipper, .flipContainer.hover .flipper {
+		transform: rotateY(180deg);
+    } */
+    .flip .flipper {
+        transform: rotate(180deg);
+    }
+
+.flipContainer, .front, .back {
+	width: 430px;
+    height: 750px;
+    z-index: 5;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}

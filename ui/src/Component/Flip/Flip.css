@@ -1,0 +1,48 @@
+/* entire container, keeps perspective */
+.flipContainer {
+	perspective: 1000px;
+	width: inherit;
+	height: inherit;
+}
+
+.flipper {
+	width: inherit;
+	height: inherit;
+}
+
+.flipContainer, .front, .back {
+	width: inherit;
+    height: inherit;
+    z-index: 5;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	z-index: 2;
+	
+	transform: rotateY(180deg);
+}

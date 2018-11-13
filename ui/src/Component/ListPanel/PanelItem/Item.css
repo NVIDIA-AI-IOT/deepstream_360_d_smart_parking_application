@@ -1,0 +1,25 @@
+.red::before {
+    color:  #FF7E00;
+}
+
+.red > .license {
+    text-decoration: none !important;
+    color: #FF7E00 !important;
+}
+
+.red > .license:hover {
+    text-decoration: underline !important;
+}
+
+.green::before {
+    color: #76b900
+}
+
+.green > .license {
+    text-decoration: none !important;
+    color: #76b900 !important;
+}
+
+.green > .license:hover {
+    text-decoration: underline !important;
+}

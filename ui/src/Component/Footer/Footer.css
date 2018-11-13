@@ -1,0 +1,12 @@
+.footer {
+    min-height: 30px !important;
+    background-color: #343131;
+    color: #fefefe;
+    border: none;
+    z-index: 100;
+}
+
+.footercontainer {
+    margin-bottom: 10px;
+    padding: 0 15px;
+}

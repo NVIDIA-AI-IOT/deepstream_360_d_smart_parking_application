@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'DINProLight';
+	src: url('./DINProLight.eot');
+	src: local('DINProLight'), url('./DINProLight.woff') format('woff'), url('./DINProLight.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_13033">Text with this font applied</p> */
+.fontsforweb_fontid_13033 {
+	font-family: 'DINProLight' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */

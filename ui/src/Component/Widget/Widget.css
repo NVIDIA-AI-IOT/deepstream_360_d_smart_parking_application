@@ -1,0 +1,15 @@
+.widget {
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(254,254,254,0.8);
+}
+
+.widget > * {
+    width: inherit;
+}
+
+@media (max-width: 900px) {
+    .widget > * {
+        width: 100%;
+    }
+}

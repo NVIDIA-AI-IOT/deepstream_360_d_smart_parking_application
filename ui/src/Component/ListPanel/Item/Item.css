@@ -1,0 +1,13 @@
+.message {
+    font-size: 16px;
+    font-weight: 700px;
+    padding: 0 10px;
+}
+
+.message > .license {
+    color: #FF7E00 !important;
+}
+
+.message > .span {
+    color: #FF7E00 !important;
+}

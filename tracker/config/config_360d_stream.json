@@ -1,0 +1,9 @@
+{
+    "profileTime": false,
+    "msgBrokerConfig": {
+        "inputKafkaServerUrl": "kafka:9092",
+        "inputKafkaTopic": "metromind-raw",
+        "outputKafkaServerUrl": "kafka:9092",
+        "outputKafkaTopic": "metromind-start"
+    }
+}

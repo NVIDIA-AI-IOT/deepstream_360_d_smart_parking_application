@@ -1,0 +1,9 @@
+/target/
+/.settings/
+/checkpoint-flowrate/
+/checkpoint-parked-moving/
+/checkpoint-understay/
+/.cache-main
+/.cache-tests
+/checkpoint-trajectory/
+/.tmpBin/

@@ -1,0 +1,29 @@
+.default {
+    color: #343131;
+    border: 1px solid #76b900;
+}
+
+.default:hover {
+    background-color: #9dd800;
+    color: #fefefe;
+}
+
+.primary {
+    background-color: #76b900;
+    color: #fefefe;
+    border: 1px solid #76b900;
+}
+
+.primary:hover {
+    background-color: #9dd800;
+    color: #343131;
+}
+
+.danger {
+    background-color: #fb0a02;
+    color: #fefefe;
+}
+
+.danger:hover {
+    background-color: #ff3f38;
+}

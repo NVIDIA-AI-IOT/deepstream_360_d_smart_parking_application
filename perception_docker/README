@@ -1,0 +1,28 @@
+This document describes the steps involved to run the 360d app using the docker image.
+
+1) Execute the run.sh command
+
+2) When the container starts up, edit config file to set broker url (if required).
+To do so first install and editor (eg: nano)
+  $ apt-get update
+  $ apt-get install nano
+
+3) enable logging (optional)
+
+~# DeepStream360d_Release/sources/tools/nvds_logger/setup_nvds_logger.sh 
+
+Note: the log severity level can be edited in the setup script if desired
+-- set to 7 if logging of entire messages is required
+
+4) run the 360d app
+Eg:
+~# deepstream-360d-app -c DeepStream360d_Release/samples/configs/deepstream-360d-app/source10_gpu0.txt 
+
+
+Note: if there is an error that looks like below, then the broker address is not valid.
+
+ERROR from nvmsgbroker: Could not configure supporting library.
+Debug info: gstnvmsgbroker.c(325): gst_nvmsgbroker_start (): /GstPipeline:pipeline/GstNvMsgBroker:nvmsgbroker:
+unable to connect to broker library
+
+

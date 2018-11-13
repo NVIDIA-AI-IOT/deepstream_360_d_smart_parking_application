@@ -1,0 +1,13 @@
+kafka-brokers = kafka:9092
+cassandra-hosts = cassandra
+cassandra-namespace = metromind
+elasticsearch-hosts = localhost
+topic = metromind-start
+countTopic = metromind-count
+puck-topic = metromind-puck
+blacklist = /blacklist.txt
+whitelist = /whitelist.txt
+anomalyTopic = metromind-anomaly
+eventsTopic = metromind-events
+understay = 5 minutes
+overstay = 24 hours

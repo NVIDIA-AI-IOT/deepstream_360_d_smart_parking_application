@@ -1,0 +1,26 @@
+{
+  "name": "360-apis",
+  "version": "1.0.0",
+  "description": "This project creates REST API for Metromind (DS-360 use case)",
+  "main": "index.js",
+  "dependencies": {
+    "cassandra-driver": "^3.5.0",
+    "change-case": "^3.0.2",
+    "csvtojson": "^2.0.8",
+    "deepcopy": "^1.0.0",
+    "elasticsearch": "^15.1.1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.1",
+    "require-dir": "^1.0.0",
+    "uuid": "^3.3.2",
+    "winston": "^3.1.0",
+    "ws": "^6.0.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "repository": "",
+  "license": ""
+}

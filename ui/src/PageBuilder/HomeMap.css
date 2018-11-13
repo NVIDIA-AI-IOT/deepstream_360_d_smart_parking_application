@@ -1,0 +1,10 @@
+.bodycontainer {
+    position: relative;
+    height: 100%;
+}
+
+.mapcontainer {
+    margin-top: 54px;
+    position: relative;
+    height: calc(100vh - 83px);
+}

@@ -1,0 +1,84 @@
+.alerts {
+    height: calc(100% - 27px);
+    overflow: hidden;
+    margin-top: 55px;
+}
+
+.timestamp {
+    font-size: 20px;
+    margin: 0 15px;
+}
+
+.title {
+    position: absolute;
+    font-size: 40px;
+    margin: 0 15px;
+    left: 0;
+    top: 0;
+}
+
+.live {
+    position: absolute;
+    font-size: 30px;
+    margin: 10px 15px 0 15px;
+    right: 0;
+    top: 0;
+}
+
+.live > a {
+    color: inherit;
+}
+
+.toggle {
+    cursor: pointer;
+}
+
+.tip > .tooltip-inner {
+    background-color: #fefefe !important;
+    color: inherit;
+}
+
+.list {
+    height: inherit;
+    overflow: auto;
+}
+
+.nvidiaList {
+    list-style: none;
+    padding: 0;
+}
+
+.nvidiaList a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+.nvidiaList li:before {
+    font-family: 'Glyphicons Halflings';
+    content: "\2212";
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-left: -20px;
+}
+
+.nvidiaList li {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 5px 5px 25px;
+}
+
+@media (max-width: 900px) {
+    .alerts {
+        height: calc(100% - 17px);
+        overflow: hidden;
+        margin-top: 35px;
+    }
+    
+    .title {
+        font-size: 28px;
+    }
+    
+    .nvidiaList li {
+        font-size: 12px;
+    }
+}

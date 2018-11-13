@@ -1,0 +1,218 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.nvidia.ds</groupId>
+	<artifactId>stream-360</artifactId>
+	<version>1.0</version>
+	<name>stream-360</name>
+
+
+	<properties>
+		<java.version>1.8</java.version>
+		<scala.minor.version>2.11</scala.minor.version>
+		<scala.binary.version>${scala.minor.version}</scala.binary.version>
+		<scala.complete.version>${scala.minor.version}.11</scala.complete.version>
+		<spark.version>2.2.0</spark.version>
+		<kafka.version>0.11.0.0</kafka.version>
+	</properties>
+
+	<dependencies>
+
+
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_${scala.minor.version}</artifactId>
+			<version>${spark.version}</version>
+			<scope>provided</scope>
+
+		</dependency>
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-mllib_${scala.minor.version}</artifactId>
+			<version>${spark.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>${kafka.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql-kafka-0-10_2.11</artifactId>
+			<version>${spark.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql_${scala.minor.version}</artifactId>
+			<version>${spark.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.datastax.spark</groupId>
+			<artifactId>spark-cassandra-connector_2.11</artifactId>
+			<version>2.0.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json4s</groupId>
+			<artifactId>json4s-native_2.11</artifactId>
+			<version>3.5.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.elasticsearch</groupId>
+			<artifactId>elasticsearch-hadoop</artifactId>
+			<version>6.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.java-json-tools</groupId>
+			<artifactId>json-schema-validator</artifactId>
+			<version>2.2.10</version>
+		</dependency>
+
+
+
+
+		<dependency>
+			<groupId>org.scalaj</groupId>
+			<artifactId>scalaj-http_${scala.minor.version}</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.scalactic</groupId>
+			<artifactId>scalactic_2.11</artifactId>
+			<version>3.0.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.scalatest</groupId>
+			<artifactId>scalatest_2.11</artifactId>
+			<version>3.0.4</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>harsha2010</groupId>
+			<artifactId>magellan</artifactId>
+			<version>1.0.5-s_2.11</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+
+
+	</dependencies>
+
+
+	<build>
+		<sourceDirectory>src/main/scala</sourceDirectory>
+		<testSourceDirectory>src/test/scala</testSourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.scala-tools</groupId>
+				<artifactId>maven-scala-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+							<goal>testCompile</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<scalaVersion>${scala.version}</scalaVersion>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<jdk>1.8</jdk>
+			</activation>
+			<properties>
+				<hadoop.version>2.7.0</hadoop.version>
+				<spark.version>2.2.0</spark.version>
+
+			</properties>
+		</profile>
+
+		<profile>
+			<id>jar-with-dependencies</id>
+			<properties>
+				<hadoop.version>2.7.0</hadoop.version>
+				<spark.version>2.2.0</spark.version>
+			</properties>
+			<build>
+
+
+				<plugins>
+
+
+					<plugin>
+						<!-- NOTE: We don't need a groupId specification because the group 
+							is org.apache.maven.plugins ...which is assumed by default. -->
+						<artifactId>maven-assembly-plugin</artifactId>
+						<version>2.5.5</version>
+						<configuration>
+
+							<descriptorRefs>
+								<descriptorRef>jar-with-dependencies</descriptorRef>
+							</descriptorRefs>
+
+						</configuration>
+						<executions>
+							<execution>
+								<id>make-assembly</id> <!-- this is used for inheritance merges -->
+								<phase>package</phase> <!-- bind to the packaging phase -->
+								<goals>
+									<goal>single</goal>
+								</goals>
+							</execution>
+						</executions>
+
+					</plugin>
+
+				</plugins>
+			</build>
+
+		</profile>
+
+
+
+	</profiles>
+	
+	<repositories>
+		<repository>
+			<id>magellan</id>
+			<url>http://dl.bintray.com/spark-packages/maven</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+
+	
+
+	</repositories>
+
+
+</project>

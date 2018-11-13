@@ -1,0 +1,114 @@
+{
+    "home": {
+        "name": "Home",
+        "username_api": "",
+        "googleMap": {
+            "defaultCenter": {
+                "lat": 37.2667081,
+                "lng": -121.9852038
+            },
+            "defaultZoom": 14,
+            "maxZoom": 21,
+            "minZoom": 10,
+            "mapTypeControl": true,
+            "mapTypeId": "roadmap"
+        },
+        "locations": [
+            {
+                "name": "garage",
+                "lat": 37.287535,
+                "lng": -121.98473
+            }
+        ]
+    },
+    "garage": {
+        "name": "Garage",
+        "defaults": {
+            "level": "P1"
+        },
+        "bounds": {
+            "north": 37.2886489370708,
+            "south": 37.2864695830171,
+            "east": -121.983629765596,
+            "west": -121.986218361030
+        },
+        "googleMap": {
+            "defaultCenter": {
+                "lat": 37.287535,
+                "lng": -121.98473
+            },
+            "defaultZoom": 19,
+            "maxZoom": 21,
+            "minZoom": 10,
+            "mapTypeControl": true,
+            "mapTypeId": "roadmap"
+        },
+        "groundOverlay": {
+            "p1GroundImage": "assets/X-StrpP1_simpleConverted.png",
+            "p1Bounds": {
+                "north": 37.2881998,
+                "south": 37.2863798,
+                "east": -121.9838699,
+                "west": -121.9859025
+            }
+        },
+        "isLive": false,
+        "live": {
+            "webSocket": {
+                "url": "",
+                "startTimestamp": "",
+                "garageId": "endeavor",
+                "garageLevel": "P1",
+                "dialogAutoCloseSeconds": 5
+            },
+            "apis": {
+                "baseurl": "",
+                "alerts": "/es/alerts",
+                "events": "/es/events",
+                "kpi": "/stats/endeavor",
+                "startTimestamp": "",
+                "alertEventRefreshIntervalSeconds": 5,
+                "uiDelaySeconds": 30,
+                "alertEventListLength": 20
+            }
+        },
+        "playback": {
+            "webSocket": {
+                "url": "",
+                "startTimestamp": "2018-11-10T01:40:26.000Z",
+                "garageId": "endeavor",
+                "garageLevel": "P1",
+                "dialogAutoCloseSeconds": 5
+            },
+            "apis": {
+                "baseurl": "",
+                "alerts": "/es/alerts",
+                "events": "/es/events",
+                "kpi": "/stats/endeavor",
+                "startTimestamp": "2018-11-10T01:40:26.000Z",
+                "alertEventRefreshIntervalSeconds": 5,
+                "autoRefreshIntervalMinutes": 30,
+                "uiDelaySeconds": 0,
+                "alertEventListLength": 20
+            }
+        },
+        "backend": {
+            "cassandraHosts": ["cassandra:9042"],
+            "cassandraKeyspace": "metromind",
+            "esHost": "elasticsearch",
+            "esPort": 9200,
+            "esAnomalyIndex": "metromind-anomaly-day2*",
+            "esEventsIndex": "metromind-start-day2*",
+            "eventCompressionSize":2,
+            "anomalyEventQuerySize":25,
+            "eventApiQueryResultSize":200,
+            "parkingSpotConfigFile": "config/parkingSpots.csv",
+            "sensorType": "Camera",
+            "garageLevel": "P1",
+            "webSocketSendPeriodInMs": 500,
+            "carRemovalPeriodInMs": 5000,
+            "originLat": 37.287280,
+            "originLon": -121.9850525
+        }
+    }
+}
