@@ -118,7 +118,7 @@ If live mode has to be used, then:
         a) sudo apt-get update
         b) sudo apt-get install default-jdk
         c) sudo apt-get install maven 
-        d) cd ./stream
+        d) cd ../stream
         e) sudo mvn clean install exec:java -Dexec.mainClass=com.nvidia.ds.util.Playback -Dexec.args="<KAFKA_BROKER_IP_ADDRESS>:<PORT> --input-file <path to input file>"
 
     **Note**: 
