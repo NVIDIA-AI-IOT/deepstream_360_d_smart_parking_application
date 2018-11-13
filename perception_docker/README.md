@@ -31,14 +31,14 @@ This document describes the steps involved to run the 360d app using the docker 
     
        $ apt-get install nano
 
-5. enable logging (optional)
+5. Enable logging (optional)
 
        $ DeepStream360d_Release/sources/tools/nvds_logger/setup_nvds_logger.sh 
 
     **Note:** the log severity level can be edited in the setup script if desired
     -- set to 7 if logging of entire messages is required
 
-6. run the 360d app<br/>
+6. Run the 360d app<br/>
 Eg:
 
        $ deepstream-360d-app -c DeepStream360d_Release/samples/configs/deepstream-360d-app/source10_gpu0.txt 
