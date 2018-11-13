@@ -54,7 +54,7 @@ If live mode has to be used, then:
 
     b) Google Map API Key:
     
-        export GOOGLE_MAP_API_KEY=AIzaSyA9nCK3AwnwsWMaFv4Ce_4wymC6ai3JEh0
+        export GOOGLE_MAP_API_KEY=<YOUR GOOGLE_API_KEY>
     
 3. Download this application by either clicking the download button on top right corner, or using the command
 
@@ -145,7 +145,7 @@ If live mode has to be used, then:
 
     The entire process to start and stop the dockers can be automated using `start.sh` and `stop.sh`.
 
-    If `start.sh` is going to be used, make sure that `xxx.xxx.xx.xx` is replaced by the IP ADDRESS of the host machine. Also replace `<YOUR GOOGLE_API_KEY>` with your own API KEY (Use this key for testing: AIzaSyA9nCK3AwnwsWMaFv4Ce_4wymC6ai3JEh0).
+    If `start.sh` is going to be used, make sure that `xxx.xxx.xx.xx` is replaced by the IP ADDRESS of the host machine. Also replace `<YOUR GOOGLE_API_KEY>` with your own API KEY.
     
     `stop.sh` should be only used when the containers need to be stopped and the docker images have to be removed from the system. 
     
