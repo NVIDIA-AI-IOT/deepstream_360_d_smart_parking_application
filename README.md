@@ -1,4 +1,4 @@
-# DeepStream 3.0 - Smart Parking Application
+# DeepStream 3.0 - 360 Degree Smart Parking Application
  
 ![Architecture](readme-images/architecture.png?raw=true "Architecture")
 
@@ -20,5 +20,11 @@ Deployment is based on an open source technology stack. The modules and technolo
 
 To run this application, the user needs to start the following docker containers:
 
-1. Analytics Server: Check the README inside `analytics_server_docker` directory and follow the steps to start the docker containers.
-2. Perception Server: Check the README inside `perception_docker` directory and follow the steps to start the docker container.
+1. **Analytics Server**: Check the README inside `analytics_server_docker` directory and follow the steps to start the docker containers.
+2. **Perception Server**: Check the README inside `perception_docker` directory and follow the steps to start the docker container.
+
+Other modules included in this project are as follows:
+1. Apis
+2. Stream
+3. Tracker
+4. Ui
