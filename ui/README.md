@@ -1,8 +1,8 @@
-# 360 UI
+# UI
 
 ## Introduction
 
-The UI for 360 app is built using React.js and is used to visualize the state of a garage along with events and anomalies occurring in the garage. This UI can run in two modes: live and playback. The live mode is aimed for monitoring the garage in real time and the playback mode is used for demo purpose i.e. it is used to visualize pre-recorded data.
+The UI for smart parking application is built using React.js and is used to visualize the state of a garage along with events and anomalies occurring in the garage. This UI can run in two modes: live and playback. The live mode is aimed for monitoring the garage in real time and the playback mode is used for demo purpose i.e. it is used to visualize pre-recorded data.
 
 ### UI Components
 
@@ -63,7 +63,7 @@ Once the Garage Marker is clicked, the map 'zooms-in' to the location and render
 ### Dependencies
 
 Make sure you have a recent version of [Node.js](https://nodejs.org/en/ "Nodejs.org") installed on your local machine.
-UI will also require Apis to be up and running. The 360 Apis can be found [here](https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application/tree/master/apis). Follow the README instructions in 360 API repository to complete the setup. 
+UI will also require Apis to be up and running. The Apis can be found [here](https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application/tree/master/apis). Follow the README instructions in the API repository to complete the setup. 
 
 ### Environment Variables
 
@@ -78,7 +78,7 @@ Follow the instructions in this [link](https://developers.google.com/maps/docume
 
 ### Installation
 
-Install `Node.js` and `360-Apis` as they are pre-requisites for this application.
+Install `Node.js` and `Apis` as they are pre-requisites for this application.
 
 Download this app by either clicking the download button on top right corner, or using the command
 
