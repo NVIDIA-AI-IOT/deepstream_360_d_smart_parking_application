@@ -28,8 +28,9 @@ Install `Node.js`, `cassandra`, `elasticsearch` as they are pre-requisites for t
 
 Download this app by either clicking the download button on top right corner, or using the command<br/>
     
-    git clone https://gitlab-master.nvidia.com/metromind/DS-360-app/apis.git
-
+    git clone https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application.git
+    cd ./apis
+    
 [package.json](package.json) has a list of libraries which are required for this application. Use `npm install` to install these dependencies of the project. 
 
 Use `npm start` to start the server.
