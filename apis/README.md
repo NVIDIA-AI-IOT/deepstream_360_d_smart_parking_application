@@ -26,9 +26,12 @@ Export the following Environment variables if running Apis outside dockers:
 
 Install `Node.js`, `cassandra`, `elasticsearch` as they are pre-requisites for this application.
 
-Download this app by either clicking the download button on top right corner, or using the command<br/>
-    
+Assuming that the application has been cloned from this repository
+
     git clone https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application.git
+        
+use the following command to change the current directory.
+
     cd ./apis
     
 [package.json](package.json) has a list of libraries which are required for this application. Use `npm install` to install these dependencies of the project. 
