@@ -2,7 +2,7 @@
  
 ![Architecture](readme-images/architecture.png?raw=true "Architecture")
 
-This document describes the full end to end smart parking application that is available with DeepStream 3.0. The below architecture provides a reference to build distributed and scalable DeepStream applications.
+This document describes the full end to end smart parking application that is available with DeepStream 3.0. The above architecture provides a reference to build distributed and scalable DeepStream applications.
 
 ## Introduction
 
