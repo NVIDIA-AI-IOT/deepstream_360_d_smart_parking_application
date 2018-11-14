@@ -19,7 +19,7 @@ This document describes the steps involved to run the 360d app using the docker 
 
        $ docker login nvcr.io
 
-     Enter the username as $oauthtoken and copy your NGC APIKey as the password.
+     Enter the username as `$oauthtoken` and copy your NGC APIKey as the password.
      Note that the login is sticky and does not have to be repeated every time.
      Refer to https://docs.nvidia.com/ngc/ngc-getting-started-guide/index.html for more information. 
 
