@@ -46,67 +46,86 @@ If live mode has to be used, then:
 
 1. Install Docker and Docker Compose.
 
-2. Export the environment variables
+2. Change Configurations (Optional)
 
-    a) IP Address of Host machine
+3. Starting Docker Containers
+
+    The dockers can be started either by running automation script or by starting them manually.
+
+    **Automation Script**
+
+    Make sure that `start.sh` is edited by replacing `xxx.xxx.xx.xx` by the IP ADDRESS of the host machine and `<YOUR GOOGLE_API_KEY>` with your own API KEY.
+    
+    `stop.sh` should be only used when the containers need to be stopped and the docker images have to be removed from the system. 
+    
+    Use `sudo docker-compose down` to stop the containers. This significantly reduces the time taken by docker containers to start again when `start.sh` is executed.
+    
+    **Alternative steps to start the container**
         
-        export IP_ADDRESS=xxx.xxx.xx.xx
+    1. Export the environment variables
 
-    b) Google Map API Key:
-    
-        export GOOGLE_MAP_API_KEY=<YOUR GOOGLE_API_KEY>
-    
-3. Assuming that the application has been cloned from this repository
-
-        git clone https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application.git
+        a) IP Address of Host machine
         
-   use the following command to change the current directory.
+            export IP_ADDRESS=xxx.xxx.xx.xx
 
-        cd ./analytics_server_docker
+        b) Google Map API Key:
+    
+            export GOOGLE_MAP_API_KEY=<YOUR GOOGLE_API_KEY>
+    
+    2. Assuming that the application has been cloned from this repository
+
+            git clone https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application.git
         
-4. Change Configurations (Optional)
+       use the following command to change the current directory.
 
-5. Run the docker containers using the following `docker-compose` command
+            cd ./analytics_server_docker
+         
+    3. Run the docker containers using the following `docker-compose` command
     
-        sudo -E docker-compose up -d
+            sudo -E docker-compose up -d
 
-    this will start the following containers
+       this will start the following containers
 
-        cassandra
-        kafka
-        zookeeper
-        spark-master
-        spark-worker
-        elasticsearch
-        kibana
-        logstash
-        api
-        ui
-        python-module
+            cassandra
+            kafka
+            zookeeper
+            spark-master
+            spark-worker
+            elasticsearch
+            kibana
+            logstash
+            api
+            ui
+            python-module
 
-6. Start spark streaming job, this job does the following
+    4.  Start spark streaming job, this job does the following
     
-    a) manages the state of parking garage
+        a) manages the state of parking garage
+
+        b) detects car "understay" anomaly
+
+        c) computes flowrate
+
+        run the following command to login into spark master 
     
-    b) detects car "understay" anomaly
+            sudo docker exec -it spark-master /bin/bash
 
-    c) computes flowrate
+        the docker container picks up the jar file from spark/data
 
-
-    run the following command to login into spark master 
-
-        sudo docker exec -it spark-master /bin/bash
-
-    the docker container picks up the jar file from spark/data
-
-        ./bin/spark-submit  --class com.nvidia.ds.stream.StreamProcessor --master spark://master:7077 --executor-memory 8G --total-executor-cores 4 /tmp/data/stream-360-1.0-jar-with-dependencies.jar
+            ./bin/spark-submit  --class com.nvidia.ds.stream.StreamProcessor --master spark://master:7077 --executor-memory 8G --total-executor-cores 4 /tmp/data/stream-360-1.0-jar-with-dependencies.jar
     
     
-    Note that one can go to stream directory and compile the source code using maven to create the stream-360-1.0-jar-with-dependencies.jar
+        Note that one can go to stream directory and compile the source code using maven to create the stream-360-1.0-jar-with-dependencies.jar
 
-        mvn clean install -Pjar-with-dependencies
+            mvn clean install -Pjar-with-dependencies
 
-7. Start spark batch job, this detects "overstay" anomaly.
+    
+    
+    **Note**:
+    + The deepstream application should be started only after the analytics server is up and running.
+    + Remember to shut down the docker-containers of analytics server once the deepstream is shut down.
+
+4. Start spark batch job, this detects "overstay" anomaly.
 
     Use a second shell and run the following command to login into spark master 
 
@@ -116,7 +135,7 @@ If live mode has to be used, then:
     
         ./bin/spark-submit  --class com.nvidia.ds.batch.BatchAnomaly --master local[8]  /tmp/data/stream-360-1.0-jar-with-dependencies.jar
 
-8.  **Generate Data** (Optional) , for test purpose ONLY, normally Deepstream Smart Parking application will read from camera and send metadata to Analytics Server 
+5.  **Generate Data** (Optional) , for test purpose ONLY, normally Deepstream Smart Parking application will read from camera and send metadata to Analytics Server 
 
         a) sudo apt-get update
         b) sudo apt-get install default-jdk
@@ -133,35 +152,38 @@ If live mode has to be used, then:
         
                 sudo mvn clean install exec:java -Dexec.mainClass=com.nvidia.ds.util.Playback -Dexec.args="<KAFKA_BROKER_IP_ADDRESS>:<PORT> --input-file <path to input file> --topic-name <kafka topic name>"
                 
-9. **Create Elasticsearch start-Index** (Optional)
+6. **Create Elasticsearch start-Index** (Optional)
 
     browse to Kibana URL http://IP_ADDRESS:5601
 
      ![Start Index](readme-images/index-creation-1.png?raw=true "Start Index")
 
 
-10. **Create Elasticsearch anomaly-Index** (Optional)
+7. **Create Elasticsearch anomaly-Index** (Optional)
 
     ![Anomaly Index](readme-images/index-creation-2.png?raw=true "Anomaly Index")
 
-11. **Automated Script** (Optional)
 
-    The entire process to start and stop the dockers can be automated using `start.sh` and `stop.sh`.
-
-    If `start.sh` is going to be used, make sure that `xxx.xxx.xx.xx` is replaced by the IP ADDRESS of the host machine. Also replace `<YOUR GOOGLE_API_KEY>` with your own API KEY.
-    
-    `stop.sh` should be only used when the containers need to be stopped and the docker images have to be removed from the system. 
-    
-    Use `sudo docker-compose down` to stop the containers. This significantly reduces the time taken by docker containers to start again when `start.sh` is executed.
-    
-    **Note**:
-    + The deepstream application should be started only after the analytics server is up and running.
-    + Remember to shut down the docker-containers of analytics server once the deepstream is shut down.
-
-12. **Test**
+8. **Test**
     
     http://IP_ADDRESS
     
     ![UI](readme-images/ui.png?raw=true "UI")    
 
     **Note**: The events that show up in the UI are comparatively less as compared to real events. This is because, if a object has a lot of events within the refresh interval then the events with respect to other objects may get obscured. To avoid this situation we display only a few events per object.
+    
+### References
+
+This analytics server has multiple components like Kafka, Elasticsearch, Nodejs etc. Use the following links to get started with these components.
+
+1. [Cassandra](http://cassandra.apache.org/doc/latest/getting_started/)
+2. [Kafka](https://kafka.apache.org/intro)
+3. [Zookeeper](https://zookeeper.apache.org/)
+4. [Spark](https://spark.apache.org/docs/latest/quick-start.html)
+5. [Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/6.4/getting-started.html)
+6. [Kibana](https://www.elastic.co/guide/en/kibana/6.4/getting-started.html)
+7. [Logstash](https://www.elastic.co/guide/en/logstash/6.4/getting-started-with-logstash.html)
+8. [Node.js](https://nodejs.org/en/docs/guides/getting-started-guide/)
+9. [React](https://reactjs.org/docs/getting-started.html)
+10. [Python](https://docs.python.org/3/tutorial/)
+
