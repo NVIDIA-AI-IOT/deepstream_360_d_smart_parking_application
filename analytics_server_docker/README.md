@@ -186,4 +186,4 @@ This analytics server has multiple components like Kafka, Elasticsearch, Nodejs 
 8. [Node.js](https://nodejs.org/en/docs/guides/getting-started-guide/)
 9. [React](https://reactjs.org/docs/getting-started.html)
 10. [Python](https://docs.python.org/3/tutorial/)
-
+11. [Scala](https://docs.scala-lang.org/getting-started.html)
