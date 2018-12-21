@@ -60,7 +60,7 @@ If live mode has to be used, then:
     
     Use `sudo docker-compose down` to stop the containers. This significantly reduces the time taken by docker containers to start again when `start.sh` is executed.
     
-    **Alternative steps to start the container**
+    **Steps to start the containers manually**
         
     1. Export the environment variables
 
