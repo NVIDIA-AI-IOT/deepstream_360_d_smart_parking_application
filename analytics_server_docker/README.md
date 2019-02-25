@@ -54,11 +54,21 @@ If live mode has to be used, then:
 
     **Automation Script**
 
-    Make sure that `start.sh` is edited by replacing `xxx.xxx.xx.xx` by the IP ADDRESS of the host machine and `<YOUR GOOGLE_API_KEY>` with your own API KEY.
+    1. Open `start.sh` and replace `xxx.xxx.xx.xx` by the IP ADDRESS of the host machine and `<YOUR GOOGLE_API_KEY>` with your own GOOGLE API KEY.
     
-    `stop.sh` should be only used when the containers need to be stopped and the docker images have to be removed from the system. 
+    2. Run `start.sh` by executing the following command
     
-    Use `sudo docker-compose down` to stop the containers. This significantly reduces the time taken by docker containers to start again when `start.sh` is executed.
+            ./start.sh
+    
+    3. Execute the following command to stop the containers
+    
+            sudo docker-compose down
+    
+    **Note**:
+    + `sudo docker-compose down` should be used to stop the containers. The execution of this command significantly reduces the time taken by docker containers to start again when `start.sh` is executed.
+    + `stop.sh` should be only used when the containers need to be stopped and the docker images have to be removed from the system. `stop.sh` can be run using the following command
+    
+            ./stop.sh
     
     **Steps to start the containers manually**
         
