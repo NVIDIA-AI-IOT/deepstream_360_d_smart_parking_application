@@ -156,9 +156,9 @@ If live mode has to be used, then:
     **Note**: 
     + Change KAFKA_BROKER_IP_ADDRESS and PORT with Host IP_ADDRESS and port used by Kafka respectively.
     + Set path to input file as `data/playbackData.json` for viewing the demo data.
-    + The following additional options can be added to args in step e:
+    + The following additional options can be added to args in `step e`:
         + **topic-name** - Name of the kafka topic to which data has to be sent. Set it to `metromind-raw` if input data is not tracked, but if input data has already gone through the tracking module then send it to `metromind-start`. The default value used in step e is `metromind-start`.<br/>
-    With this additional option, step e will look as follows:
+    With this additional option, `step e` will look as follows:
         
                 sudo mvn clean install exec:java -Dexec.mainClass=com.nvidia.ds.util.Playback -Dexec.args="<KAFKA_BROKER_IP_ADDRESS>:<PORT> --input-file <path to input file> --topic-name <kafka topic name>"
                 
