@@ -148,7 +148,7 @@ If live mode has to be used, then:
 5.  **Generate Data** (Optional) , for test purpose ONLY, normally Deepstream Smart Parking application will read from camera and send metadata to Analytics Server 
 
         a) sudo apt-get update
-        b) sudo apt-get install default-jdk
+        b) sudo apt install openjdk-8-jdk
         c) sudo apt-get install maven 
         d) cd ../stream
         e) sudo mvn clean install exec:java -Dexec.mainClass=com.nvidia.ds.util.Playback -Dexec.args="<KAFKA_BROKER_IP_ADDRESS>:<PORT> --input-file <path to input file>"
