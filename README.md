@@ -4,6 +4,8 @@
 
 This document describes the full end to end smart parking application that is available with DeepStream 3.0. The above architecture provides a reference to build distributed and scalable DeepStream applications.
 
+**Note**: The perception server only supports DeepStream 3.0.
+
 ## Introduction
 
 The perception capabilities of a DeepStream application can now seamlessly be augmented with data analytics capabilities to build complete solutions, offering rich data dashboards for actionable insights. This bridging of DeepStream’s perception capabilities with data analytics frameworks is particularly useful for applications requiring long term trend analytics, global situational awareness, and forensic analysis. This also allows leveraging major Internet of Things (IOT) services as the infrastructure backbone.
