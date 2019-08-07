@@ -2,7 +2,7 @@
 
 This document describes the steps involved to run the 360d app using the docker image.
 
-**Note**: The perception server only supports DeepStream 3.0.
+## Note: The perception server only supports DeepStream 3.0 and will not work with DeepStream 4.0. We will release a compatible 4.0 example soon.
 
 1. Assuming that the application has been cloned from this repository
 
