@@ -2,6 +2,8 @@
 
 This document describes the steps involved to run the 360d app using the docker image.
 
+**Note**: The perception server only supports DeepStream 3.0.
+
 1. Assuming that the application has been cloned from this repository
 
        $ git clone https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application.git
