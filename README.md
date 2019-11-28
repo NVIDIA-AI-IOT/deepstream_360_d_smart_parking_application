@@ -1,10 +1,10 @@
-# DeepStream 3.0 - 360 Degree Smart Parking Application
+# DeepStream 4.0 - 360 Degree Smart Parking Application 
  
 ![Architecture](readme-images/architecture.png?raw=true "Architecture")
 
 This document describes the full end to end smart parking application that is available with DeepStream 3.0. The above architecture provides a reference to build distributed and scalable DeepStream applications.
 
-## Note: The perception server only supports DeepStream 3.0 and will not work with DeepStream 4.0. We will release a compatible 4.0 example soon.
+
 
 ## Introduction
 
