@@ -6,6 +6,7 @@ This document describes the full end to end smart parking application that is av
 
 
 
+
 ## Introduction
 
 The perception capabilities of a DeepStream application can now seamlessly be augmented with data analytics capabilities to build complete solutions, offering rich data dashboards for actionable insights. This bridging of DeepStream’s perception capabilities with data analytics frameworks is particularly useful for applications requiring long term trend analytics, global situational awareness, and forensic analysis. This also allows leveraging major Internet of Things (IOT) services as the infrastructure backbone.
@@ -28,6 +29,7 @@ To run this application, the user needs to start the following docker containers
 
 1. **[Analytics Server](https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application/tree/master/analytics_server_docker)**: Check the README inside `analytics_server_docker` directory and follow the steps to start the docker containers.
 2. **[Perception Server](https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application/tree/master/perception_docker)**: Check the README inside `perception_docker` directory and follow the steps to start the docker container.
+3. **[Application note](https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application/tree/master/DeepStream_Analytics_Applications.pdf)**
 
 Other modules included in this application are as follows:
 1. [Apis](https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application/tree/master/apis)
