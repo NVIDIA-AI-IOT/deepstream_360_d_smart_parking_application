@@ -8,7 +8,7 @@ This document describes the steps involved to run the 360d app using the docker 
        $ git clone https://github.com/NVIDIA-AI-IOT/deepstream_360_d_smart_parking_application.git
    use the following command to change the current directory.
 
-       $ cd ./perception_docker
+       $ cd ./deepstream_360_d_smart_parking_application/perception_docker 
 
    Create a directory named 'videos' and change the current directory by executing the command 
    
@@ -24,7 +24,8 @@ This document describes the steps involved to run the 360d app using the docker 
      Note that the login is sticky and does not have to be repeated every time.
      Refer to https://docs.nvidia.com/ngc/ngc-getting-started-guide/index.html for more information. 
 
-3. Execute the `run.sh` command (sudo maybe required depending on how docker is configured on your system)
+3. Execute the `run.sh` command (sudo maybe required depending on how docker is configured on your system) by going to perception_docker
+   directory
 
 4. When the container starts up, edit config file to set broker url (if required). To do so first install an editor (eg: nano)
 
