@@ -1,4 +1,4 @@
-# DeepStream 4.0 - 360 Degree Smart Parking Application 
+# DeepStream 5.0 - 360 Degree Smart Parking Application 
  
 ![Architecture](readme-images/architecture.png?raw=true "Architecture")
 
