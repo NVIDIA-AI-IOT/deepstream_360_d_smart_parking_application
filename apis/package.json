@@ -9,7 +9,7 @@
     "csvtojson": "^2.0.8",
     "deepcopy": "^1.0.0",
     "elasticsearch": "^15.1.1",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "morgan": "^1.9.1",
     "require-dir": "^1.0.0",
     "uuid": "^3.3.2",
