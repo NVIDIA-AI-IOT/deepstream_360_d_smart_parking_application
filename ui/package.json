@@ -10,7 +10,7 @@
     "@types/googlemaps": "^3.0.0",
     "@types/markerclustererplus": "^2.1.29",
     "@types/react": "^15.0.0",
-    "ajv": "^6.0.0",
+    "ajv": "^6.12.3",
     "autoprefixer": "7.1.6",
     "axios": "^0.18.0",
     "babel-core": "6.26.0",
